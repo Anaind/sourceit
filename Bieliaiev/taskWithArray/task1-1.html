@@ -1,0 +1,17 @@
+<html>
+<head>
+  <title>Table</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var column = new Array();
+      for (var i = 1; i <= 10; i++) {
+         column[i-1] = [];
+          for (var j = 1; j <= 10; j++) {
+            column[i-1][j-1] = i * j;
+          }
+       }
+  document.write(column);   
+  </script>
+</body>
+</html>
