@@ -18,10 +18,26 @@ function multiplicationTable(size) {
 }
 
 function matrix (size) {
-    var matrix = [];
-        for (var i = 0; i < size; i++) {
-            matrix[i]
+    var matrix = [],i,k;
+    for(i=1; i<11; i++){
+        var matrix_str=[];
+        for(k=1; k<11; k++){
+            if(k==i){
+            matrix_str[k-1]=1;
+        }else if(k+i==11){
+            matrix_str[k-1]=2;
+        }else if(i<5 && k>i && k<11-i){
+            matrix_str[k-1]=3;
+        }else if(i>5 && k<i && k>11-i){
+            matrix_str[k-1]=5;
+        }else if(k<5 && i>k && i<11-k){
+            matrix_str[k-1]=6;
+        }else if(k>5 && i<k && i>11-k){
+            matrix_str[k-1]=4;
         }
+    }
+    matrix[i-1]=matrix_str;
+    }
     return matrix;
 }
 
