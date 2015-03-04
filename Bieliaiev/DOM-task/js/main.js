@@ -61,7 +61,7 @@
                 heading.innerHTML=data[i];
                 fragment.appendChild(heading);
             } else {
-                fragment.appendChild(recursiveHeadings(data[i], weight++));
+                fragment.appendChild(recursiveHeadings(data[i], ++weight));
             }          
         }
         return fragment;
@@ -92,6 +92,6 @@
 	//вызывать функции здесь!
     sortHandler();
     document.getElementById('list').appendChild(recursiveList());
-    document.getElementById('headings').appendChild(recursiveHeadingse([1,2,[3,4,[6,7,8],9],10,11]), 1);
+    document.getElementById('headings').appendChild(recursiveHeadings([1,2,[3,4,[6,7,8],9],10,11], 1));
     simpleValidation(form);
 })();
